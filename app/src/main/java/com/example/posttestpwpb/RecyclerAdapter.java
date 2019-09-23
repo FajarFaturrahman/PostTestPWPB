@@ -44,7 +44,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.UserVi
 
         holder.txtJudul.setText(currentNote.getJudul());
         holder.txtDeskripsi.setText(currentNote.getDeskripsi());
-
+        holder.txtJam.setText(currentNote.getTanggal());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,12 +61,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.UserVi
 
     public class UserViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtJudul, txtDeskripsi;
-        TextClock txtJam;
+        TextView txtJudul, txtDeskripsi,txtJam;
+
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtJam = itemView.findViewById(R.id.txt_jam);
+            txtJam = itemView.findViewById(R.id.date);
             txtJudul = itemView.findViewById(R.id.txt_judul);
             txtDeskripsi = itemView.findViewById(R.id.txt_deskripsi);
         }
